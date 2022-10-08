@@ -1,0 +1,48 @@
+title: 'Pixel Open'
+baseline: 'Our projects'
+baseurl: 'https://pixel-open.org/'
+description: 'Projets Open source pour Symfony, Wordpress, Prestashop, Sulu, Magento... proposé par Pixel Développement'
+author:
+    name: 'Team Pixel'
+    url: 'https://www.pixel-developpement.com'
+image: pixel-card.png
+
+socials:
+    github: https://github.com/Pixel-Open
+
+language: en
+
+theme:
+  - pwa
+serviceworker:
+  enabled: true
+
+metatags:
+  jsonld: true
+  articles: news
+body:
+  images:
+    lazy:
+      enabled: true
+    caption:
+      enabled: true
+    resize:
+      enabled: true
+    responsive:
+      enabled: true
+    webp:
+      enabled: true
+    remote:
+      enabled: true
+  notes:
+    enabled: true
+  highlight:
+    enabled: true
+assets:
+  images:
+    optimize:
+      enabled: true
+    responsive:
+      enabled: true
+    webp:
+      enabled: true
