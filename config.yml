@@ -7,18 +7,11 @@ author:
     url: 'https://www.pixel-developpement.com'
 image: pixel-card.png
 
+socials:
+    github: https://github.com/Pixel-Open
+
 language: en
-languages:
-  - code: en
-    name: English
-    locale: en_US
-  - code: fr 
-    name: Français
-    locale: fr_FR
-    enabled: true
-    config:
-      baseline: "Nos Projets Open source"
-      description: "Projets Open source pour Symfony, Wordpress, Prestashop, Sulu, Magento... proposé par Pixel Développement"
+
 theme:
   - pwa
 serviceworker:
