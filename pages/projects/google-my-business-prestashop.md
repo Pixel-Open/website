@@ -1,5 +1,5 @@
 ---
-title: A prestashop module for Google My Business
+title: Google My Business for Prestashop
 technos : [prestashop]
 repository: https://github.com/Pixel-Open/cloudflare-turnstile-bundle
 ---
