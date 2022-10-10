@@ -20,6 +20,9 @@ menus:
     - id: news
       name: News
       weight: 20
+    - id: about
+      name: About
+      weight: 30
   footer:
     - id: index
       weight: 0

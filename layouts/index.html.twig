@@ -8,10 +8,10 @@
 	<div class="container container-md mx-auto">
 		<div class="flex flex-row gap-16 items-center">
 			<div class="basis-3/5 flex flex-col gap-6">
-				<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, aliquet aliquam risus.</h1>
-				<p class="text-gris">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis habitant ultricies dui, et, dignissim tempus sit aliquet. Risus, et, tortor cursus ante fringilla enim.</p>
+				<h1>{{ page.title }}</h1>
+				<p class="text-gris">{{ page.content }}</p>
 				<div>
-					<a href="" class="text-white bg-color font-bold py-2 px-4 rounded-md transition-all hover:no-underline hover:bg-colorHover">En savoir plus</a>
+					<a href="{{ url('about') }}" class="text-white bg-color font-bold py-2 px-4 rounded-md transition-all hover:no-underline hover:bg-colorHover">More informations</a>
 				</div>
 			</div>
 			<div class="basis-2/5">

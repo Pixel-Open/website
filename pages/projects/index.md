@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: Our Projects
 pagination:
     max: 100
 ---
