@@ -13,5 +13,5 @@ npx tailwindcss -i ./assets/tailwind.css -o ./assets/styles.css --watch
 ### Run Cecil : 
 
 ```bash
-cecil serve
+cecil serve --clear-cache
 ```

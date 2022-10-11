@@ -24,15 +24,11 @@ menus:
       name: About
       weight: 30
   footer:
-    - id: index
-      weight: 0
-      name: Home
+
     - id: projects
-      name: Projects
+      name: Legal mention
       weight: 10
-    - id: news
-      name: News
-      weight: 20
+
 
 theme:
   - pwa
