@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="basis-2/5 inclusion">
-                    {{ asset('pages/welcome.jpg')|resize(600)|html({alt: 'Image description'}, {responsive: true}) }}
+                    {{ asset('pages/welcome.jpg')|resize(600)|html({alt: page.title}, {responsive: true}) }}
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
             {%- for news in site.pages.showable|filter_by('section', 'news')|sort_by_date|slice(0, 4) ~%}
                 <div class="itemList bg-white/10 p-6 rounded-md text-left">
                     <a href="{{ url(news) }}" title="{{ news.description|default() }}">
-                        {% if news.cover is defined %}{{ asset(news.cover)|resize(300)|html({alt: 'Image description'}, {responsive: true}) }}{% else %}{{ asset('pages/welcome.jpg')|resize(300)|html({alt: 'Image description'}, {responsive: true}) }}{% endif %}
+                        {% if news.cover is defined %}{{ asset(news.cover)|resize(300)|html({alt: news.title}, {responsive: true}) }}{% else %}{{ asset('pages/welcome.jpg')|resize(300)|html({alt: news.title}, {responsive: true}) }}{% endif %}
                         <img src="" alt="">
                         <h3 class="font-bold py-4">{{ news.title }}</h3>
                         <p>{{ news.date|format_date('long') }}</p>

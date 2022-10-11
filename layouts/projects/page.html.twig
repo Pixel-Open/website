@@ -17,7 +17,7 @@
                                 </div>
                             </div>
                             <div class="basis-2/5">
-                                {{ asset('pages/welcome.jpg')|resize(600)|html({alt: 'Image description'}, {responsive: true}) }}
+                                {% if page.cover is defined %}{{ asset(page.cover)|resize(600)|html({alt: page.title}, {responsive: true}) }}{% else %}{{ asset('pages/welcome.jpg')|resize(600)|html({alt: page.title}, {responsive: true}) }}{% endif %}
                             </div>
                         </div>
                     </div>
