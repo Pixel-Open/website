@@ -1,5 +1,17 @@
 ---
-title: Lauch Pixel Open website !
+title: Lauch  website !
+description: "Sharing our open source projects through a dedicated site, here is the objective of this site. We will also publish news about our projects or technical articles."
+date: 2022-10-01
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus non enim sed maximus. Phasellus in accumsan nibh, at mollis nibh. Nunc id leo venenatis, pellentesque odio sit amet, lobortis augue. Sed hendrerit vulputate quam, quis dictum est molestie ac. In convallis urna sit amet dolor semper vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+Sharing our open source projects through a dedicated site, here is the objective of this site. We will also publish news about our projects or technical articles.
 <!-- break -->
+
+## Static is basic :)
+
+To design this site, we want to go back to the basics: a static site.
+
+The design of the site was made with the static site generator: Cecil
+
+It's not the best known but we liked its simplicity and its features.
+
+The icing on the cake, its developer is very nice.
