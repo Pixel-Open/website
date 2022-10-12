@@ -37,21 +37,8 @@
     <div class="container mx-auto px-6 py-20 text-center">
         <h2 class="text-3xl font-bold mb-10">Our latest news</h2>
         <div class="grid grid-cols-4 gap-6">
-            {%- for news in site.pages.showable|filter_by('section', 'news')|sort_by_date|slice(0, 4) ~%}
-                <div class="itemList bg-white/10 p-6 rounded-md text-left">
-                    <a href="{{ url(news) }}" title="{{ news.description|default() }}">
-                        {% if news.cover is defined %}{{ asset(news.cover)|resize(300)|html({alt: news.title}, {responsive: true}) }}{% else %}{{ asset('pages/welcome.jpg')|resize(300)|html({alt: news.title}, {responsive: true}) }}{% endif %}
-                        <img src="" alt="">
-                        <h3 class="font-bold py-4">{{ news.title }}</h3>
-                        <p>{{ news.date|format_date('long') }}</p>
-                        <div class="flex flex-row items-center gap-2 pt-4">
-                            <a href="{{ url(news) }}"
-                               class="text-white bg-color font-bold py-2 px-4 rounded-md transition-all hover:no-underline hover:bg-colorHover">
-                                more
-                            </a>
-                        </div>
-                    </a>
-                </div>
+            {%- for new in site.pages.showable|filter_by('section', 'news')|sort_by_date|slice(0, 4) ~%}
+                {% include 'partials/list-new.html.twig' with {'new': new} only %}
             {%- endfor ~%}
         </div>
     </div>

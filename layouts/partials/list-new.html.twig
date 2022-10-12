@@ -1,0 +1,14 @@
+<div class="itemList bg-white/10 p-6 rounded-md text-left">
+    <a href="{{ url(new) }}" title="{{ new.description|default() }}">
+        {% if new.cover is defined %}{{ asset(new.cover)|resize(300)|html({alt: new.title}, {responsive: true}) }}{% else %}{{ asset('pages/welcome.jpg')|resize(300)|html({alt: new.title}, {responsive: true}) }}{% endif %}
+    </a>
+        <h3 class="font-bold py-4">{{ new.title }}</h3>
+        <p>{{ new.date|format_date('long') }}</p>
+        <div class="flex flex-row items-center gap-2 pt-4">
+            <a href="{{ url(new) }}"
+               class="text-white bg-color font-bold py-2 px-4 rounded-md transition-all hover:no-underline hover:bg-colorHover">
+                more
+            </a>
+        </div>
+
+</div>
