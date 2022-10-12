@@ -2,9 +2,9 @@
 
          {% block content %}
              <h1>Our projects</h1>
-             <div class="post-list post-list_columns">
-                 {%- for project in pages ~%}
-                     {% include 'partials/list-project.html.twig' with {'project': project} only %}
-                 {%- endfor ~%}
-             </div>
+
+             {%- for project in pages ~%}
+                 {% include 'partials/list-project.html.twig' with {'project': project} only %}
+             {%- endfor ~%}
+
          {% endblock content %}

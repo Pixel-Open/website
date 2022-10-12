@@ -11,7 +11,7 @@
                             <div class="basis-3/5 flex flex-col gap-6">
                                 <h1>{{ page.title|e }}</h1>
                                 <time>{{ page.date|format_date('long') }}</time>
-                                <p class="text-gris">{{ page.content }}</p>
+
                                 <div>
                                     <a href=""
                                        class="text-white bg-color font-bold py-2 px-4 rounded-md transition-all hover:no-underline hover:bg-colorHover">Download</a>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 </div>
-
+                <p class="text-gris">{{ page.content }}</p>
                 {%- if page.prev is defined or page.next is defined ~%}
                     <nav>
                         <ul>

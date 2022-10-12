@@ -1,4 +1,4 @@
-<div class="itemList bg-white/10 p-6 rounded-md text-left">
+<div class="itemList bg-white/10 p-6 rounded-md text-left {% if project.technos is defined %}{{ project.technos|join(' ') }}{% endif %} ">
     {% if project.cover is defined %}{{ asset(project.cover)|resize(300)|html({alt: project.title}, {responsive: true}) }}{% else %}{{ asset('pages/welcome.jpg')|resize(300)|html({alt: project.title}, {responsive: true}) }}{% endif %}
     <h3 class="font-bold py-4">{{ project.title }}</h3>
     <div class="flex flex-row items-center gap-2">
@@ -8,7 +8,7 @@
         </a>
         <a class="inline-block no-underline hover:text-slate-700 dark:hover:text-slate-100 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4"
            target="_blank" href="{{ project.repository }}">
-            <img src="/icons/github.svg" alt="github"  style="height:24px; width: 24px; ">
+            <img src="/icons/github.svg" alt="github" class="object-contain w-[32px]"  >
         </a>
     </div>
 </div>
