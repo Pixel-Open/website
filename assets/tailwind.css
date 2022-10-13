@@ -212,11 +212,9 @@
   }
 }
 
-.itemList {
-  img {
+.itemList img {
     @apply w-full aspect-video object-cover object-center;
   }
-}
 
 /* OFFCANVAS */
 @keyframes hover {
