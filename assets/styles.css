@@ -640,8 +640,20 @@ a:hover {
   bottom: -80vh;
 }
 
+.top-0 {
+  top: 0px;
+}
+
+.right-\[30px\] {
+  right: 30px;
+}
+
 .z-50 {
   z-index: 50;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .mx-auto {
@@ -707,6 +719,10 @@ a:hover {
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-\[70px\] {
+  height: 70px;
 }
 
 .min-h-\[90vh\] {
@@ -818,6 +834,11 @@ a:hover {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(19 26 37 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-white\/10 {
@@ -1228,11 +1249,11 @@ a:hover {
 }
 
 .offcanvas-menu > label {
-  top: 30px;
+  top: 26px;
   left: 30px;
   position: fixed;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   transition: 0.3s ease;
   display: flex;
@@ -1246,17 +1267,16 @@ a:hover {
   transition: background 0.3s, transform 0.3s;
   content: "";
   position: absolute;
-  height: 4px;
-  width: 40px;
-  background: #FFFFFF;
+  height: 3px;
+  width: 20px;
 }
 
 .offcanvas-menu label span::before {
-  transform: translateY(-12px);
+  transform: translateY(-8px);
 }
 
 .offcanvas-menu label span::after {
-  transform: translateY(12px);
+  transform: translateY(8px);
 }
 
 .offcanvas-menu nav {
@@ -1271,30 +1291,6 @@ a:hover {
   z-index: 9999;
 }
 
-.offcanvas-menu nav > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.offcanvas-menu nav > div a {
-  font-size: 2.5rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  font-family: "Monoton", cursive;
-  background: linear-gradient(-90deg, #49a4ed 30%, #3d00a9 110%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.offcanvas-menu nav > div a i {
-  font-size: 4rem;
-  background: linear-gradient(120deg, #49a4ed 30%, #3d00a9 110%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .offcanvas-menu nav > div label {
   width: 30px;
   height: 30px;
@@ -1304,38 +1300,6 @@ a:hover {
   cursor: pointer;
   transition: 0.3s ease;
 }
-
-.offcanvas-menu nav > div label span,
-.offcanvas-menu nav > div label span:before,
-.offcanvas-menu nav > div label span:after {
-  background: #ffffff;
-}
-
-/* .offcanvas-menu nav > ul {
-  margin-top: 30px;
-  counter-reset: nav-link-count;
-}
-.offcanvas-menu nav > ul li {
-  cursor: pointer;
-  padding: 10px 0;
-  transform: translateX(-30px);
-  opacity: 0;
-  transition: 0.4s ease;
-  counter-increment: nav-link-count;
-}
-.offcanvas-menu nav > ul li:hover {
-  animation: hover 0.5s;
-} 
-.offcanvas-menu nav > ul li a {
-  font-size: 2.5rem;
-  line-height: 1.5;
-  font-weight: 400;
-  color: darken($color: #fff, $amount: 80);
-  display: block;
-}
-.offcanvas-menu nav > ul li a::after {
-  content: " : " counter(nav-link-count);
-} */
 
 .offcanvas-menu input[type="checkbox"] {
   display: none;
@@ -1367,37 +1331,16 @@ a:hover {
   transition-delay: 0.2s;
 }
 
-.offcanvas-menu input[type="checkbox"]:checked ~ nav ul li {
-  opacity: 1;
-  transform: translateX(0px);
+.before\:bg-white::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.offcanvas-menu input[type="checkbox"]:checked ~ nav ul li:nth-child(1) {
-  transition-delay: 0.1s;
-}
-
-.offcanvas-menu input[type="checkbox"]:checked ~ nav ul li:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.offcanvas-menu input[type="checkbox"]:checked ~ nav ul li:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
-.offcanvas-menu input[type="checkbox"]:checked ~ nav ul li:nth-child(4) {
-  transition-delay: 0.4s;
-}
-
-.offcanvas-menu input[type="checkbox"]:checked ~ nav ul li:nth-child(5) {
-  transition-delay: 0.5s;
-}
-
-.offcanvas-menu input[type="checkbox"]:checked ~ nav ul li:nth-child(6) {
-  transition-delay: 0.6s;
-}
-
-.offcanvas-menu input[type="checkbox"]:checked ~ nav ul li:nth-child(7) {
-  transition-delay: 0.7s;
+.after\:bg-white::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-colorHover:hover {
