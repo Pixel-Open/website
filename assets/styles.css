@@ -773,6 +773,10 @@ a:hover {
   gap: 4rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
@@ -783,10 +787,6 @@ a:hover {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
 }
 
 .gap-2 {
@@ -855,11 +855,6 @@ a:hover {
   padding: 0.5rem;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -868,6 +863,11 @@ a:hover {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .py-20 {
@@ -984,6 +984,10 @@ a:hover {
 
 .inclusion picture, .inclusion picture img {
   mix-blend-mode: exclusion;
+}
+
+.lighten picture, .lighten picture img {
+  mix-blend-mode: lighten;
 }
 
 /* ----------------------------------------------
