@@ -1217,7 +1217,7 @@ a:hover {
   }
 }
 
-.itemList img {
+.itemList .cover img {
   aspect-ratio: 16 / 9;
   width: 100%;
   -o-object-fit: cover;
@@ -1351,6 +1351,10 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
   .md\:h-auto {
     height: auto;
   }

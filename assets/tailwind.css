@@ -212,7 +212,7 @@
   }
 }
 
-.itemList img {
+.itemList .cover img {
     @apply w-full aspect-video object-cover object-center;
   }
 
