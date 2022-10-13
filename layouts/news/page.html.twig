@@ -2,36 +2,35 @@
 
             {%- block content ~%}
 
-                <div class="intro w-full min-h-[90vh] relative bg-cover overflow-hidden flex items-center" style="">
+                <div class="intro w-full relative bg-cover overflow-hidden flex items-center" style="">
                     <div class="cloud-1 w-[160vw] h-[150vh] bg-secondary rounded-full absolute -top-[100vh] -right-[100vw] blur-3xl opacity-50"></div>
                     <div class="cloud-1 w-[140vw] h-[140vh] bg-secondary rounded-full absolute -left-[85vw] -bottom-[80vh] blur-3xl opacity-50"></div>
 
-                    <div class="container container-md mx-auto">
-                        <div class="flex flex-row gap-16 items-center">
-                            <div class="basis-3/5 flex flex-col gap-6">
-                                <h1>{{ page.title|e }}</h1>
-                                <time>{{ page.date|format_date('long') }}</time>
-
-                                <div>
-                                    <a href=""
-                                       class="text-white bg-color font-bold py-2 px-4 rounded-md transition-all hover:no-underline hover:bg-colorHover">Download</a>
-                                </div>
+                    <div class="container container-md mx-auto pt-32 md:pt-48 pb-10 md:pb-28 px-6">
+                        <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
+                            <div class="md:basis-1/2 flex flex-col justify-center md:justify-start gap-0 md:gap-6">
+                                <h1 class="text-xl lg:text-4xl font-bold text-center">{{ page.title|e }}</h1>
+                                <time class="text-center md:text-left">{{ page.date|format_date('long') }}</time>
                             </div>
-                            <div class="basis-2/5">
-                                {% if page.cover is defined %}{{ asset(page.cover)|resize(600)|html({alt: page.title}, {responsive: true}) }}{% else %}{{ asset('pages/welcome.jpg')|resize(600)|html({alt: page.title}, {responsive: true}) }}{% endif %}
+                            <div class="md:basis-1/2">
+                                {% if page.cover is defined %}{{ asset(page.cover)|html({alt: page.title}) }}{% else %}{{ asset('pages/welcome.jpg')|html({alt: page.title}) }}{% endif %}
                             </div>
                         </div>
                     </div>
                 </div>
-                <p class="text-gris">{{ page.content }}</p>
+
+                <div class="container container-md mx-auto py-10 md:py-28 text-gris px-6">
+                    {{ page.content }}
+                </div>
+
                 {%- if page.prev is defined or page.next is defined ~%}
-                    <nav>
-                        <ul>
+                    <nav class="w-full py-16">
+                        <ul class="flex flex-row justify-center items-center gap-10">
                             {%- if page.prev is defined ~%}
-                                <li><a href="{{ url(page.prev) }}">{{ page.prev.title }}</a></li>
+                                <li><a href="{{ url(page.prev) }}" class="px-10 py-4 rounded-full bg-color text-white transition-all hover:scale-105 hover:no-underline">{{ page.prev.title }}</a></li>
                             {%- endif ~%}
                             {%- if page.next is defined ~%}
-                                <li><a href="{{ url(page.next) }}">{{ page.next.title }}</a></li>
+                                <li><a href="{{ url(page.next) }}" class="px-10 py-4 rounded-full bg-color text-white transition-all hover:scale-105 hover:no-underline">{{ page.next.title }}</a></li>
                             {%- endif ~%}
                         </ul>
                     </nav>
