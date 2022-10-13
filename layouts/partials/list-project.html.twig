@@ -1,4 +1,4 @@
-<div class="itemList bg-white/10 p-6 rounded-md text-left {% if project.technos is defined %}{{ project.technos|join(' ') }}{% endif %} ">
+<div class="projItem float-left m-6 w-full md:w-1/2 xl:w-1/4 itemList bg-white/10 p-6 rounded-md text-left {% if project.technos is defined %}{{ project.technos|join(' ') }}{% endif %}" data-category="{% if project.technos is defined %}{{ project.technos|join(' ') }}{% endif %}">
     <span class="cover">
         {% if project.cover is defined %}{{ asset(project.cover)|html({alt: project.title}) }}{% else %}{{ asset('pages/welcome.jpg')|html({alt: project.title}) }}{% endif %}
     </span>

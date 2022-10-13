@@ -6,8 +6,16 @@
 
         <div class="container mx-auto px-6 py-10 text-center pt-32 lg:pt-44">
             <h1 class="text-lg md:text-xl lg:text-4xl font-bold mb-10 lg:mb-20">{{ page.title|e }}</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 xl:gap-6">
-                {%- for project in site.pages.showable|filter_by('section', 'projects')|sort_by_date|slice(0, 4) ~%}
+            
+            <div class="filters filters-button-group button-group px-6">
+                <button class="button is-checked" data-filter="*">show all</button>
+                <button class="button" data-filter=".symfony">Symfony</button>
+                <button class="button" data-filter=".prestashop">Prestashop</button>
+            </div>
+            
+            {# <div class="projList grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 xl:gap-6"> #}
+            <div class="projList">
+            {%- for project in site.pages.showable|filter_by('section', 'projects')|sort_by_date|slice(0, 4) ~%}
                 {% include 'partials/list-project.html.twig' with {'project': project} only %}
             {%- endfor ~%}
             </div>
@@ -15,3 +23,44 @@
         </div>
     </div>
 {%- endblock content ~%}
+
+{%- block javascript ~%}
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+        // init Isotope
+        var iso = new Isotope( '.projList', {
+            itemSelector: '.projItem'
+        });
+
+        // bind filter button click
+        var filtersElem = document.querySelector('.filters-button-group');
+        filtersElem.addEventListener( 'click', function( event ) {
+        // only work with buttons
+        if ( !matchesSelector( event.target, 'button' ) ) {
+            return;
+        }
+        var filterValue = event.target.getAttribute('data-filter');
+        // use matching filter function
+        filterValue = filterValue;
+        iso.arrange({ filter: filterValue });
+        });
+
+        // change is-checked class on buttons
+        var buttonGroups = document.querySelectorAll('.button-group');
+        for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+        var buttonGroup = buttonGroups[i];
+        radioButtonGroup( buttonGroup );
+        }
+
+        function radioButtonGroup( buttonGroup ) {
+        buttonGroup.addEventListener( 'click', function( event ) {
+            // only work with buttons
+            if ( !matchesSelector( event.target, 'button' ) ) {
+            return;
+            }
+            buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+            event.target.classList.add('is-checked');
+        });
+        }
+    </script>
+{%- endblock ~%}

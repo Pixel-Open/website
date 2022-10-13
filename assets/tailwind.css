@@ -216,6 +216,16 @@
     @apply w-full aspect-video object-cover object-center;
   }
 
+.filters {
+  @apply w-full flex flex-row justify-start gap-2 mb-8;
+}
+.filters button {
+  @apply bg-none px-4 py-2 transition-all hover:bg-color text-white;
+}
+.filters button.is-checked {
+  @apply bg-color;
+}
+
 /* OFFCANVAS */
 @keyframes hover {
 	50% {
