@@ -1,5 +1,5 @@
 <div class="itemList bg-white/10 p-6 rounded-md text-left {% if project.technos is defined %}{{ project.technos|join(' ') }}{% endif %} ">
-    {% if project.cover is defined %}{{ asset(project.cover)|resize(300)|html({alt: project.title}, {responsive: true}) }}{% else %}{{ asset('pages/welcome.jpg')|resize(300)|html({alt: project.title}, {responsive: true}) }}{% endif %}
+    {% if project.cover is defined %}{{ asset(project.cover)|html({alt: project.title}) }}{% else %}{{ asset('pages/welcome.jpg')|html({alt: project.title}) }}{% endif %}
     <h3 class="text-base md:text-xl font-bold py-4">{{ project.title }}</h3>
     <div class="flex flex-row items-center gap-2">
         <a class="text-white bg-color font-bold py-2 px-4 rounded-md transition-all hover:no-underline hover:bg-colorHover"
