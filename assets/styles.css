@@ -785,10 +785,6 @@ a:hover {
   gap: 4rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
 .gap-1 {
   gap: 0.25rem;
 }
@@ -811,6 +807,10 @@ a:hover {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .overflow-hidden {
@@ -920,20 +920,20 @@ a:hover {
   padding-bottom: 1rem;
 }
 
-.pb-14 {
-  padding-bottom: 3.5rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
-}
-
 .pt-32 {
   padding-top: 8rem;
 }
 
 .pb-10 {
   padding-bottom: 2.5rem;
+}
+
+.pb-14 {
+  padding-bottom: 3.5rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pt-4 {

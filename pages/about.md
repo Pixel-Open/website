@@ -1,6 +1,7 @@
 ---
 title: About
-layout: about
+layout: content
+cover: "pages/about.jpg"
 menu:
     main:
         name: About
