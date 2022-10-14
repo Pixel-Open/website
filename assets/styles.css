@@ -656,14 +656,6 @@ a:hover {
   z-index: 40;
 }
 
-.float-left {
-  float: left;
-}
-
-.m-6 {
-  margin: 1.5rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -751,10 +743,6 @@ a:hover {
 
 .w-\[32px\] {
   width: 32px;
-}
-
-.w-1\/4 {
-  width: 25%;
 }
 
 .basis-3\/5 {
@@ -1393,6 +1381,78 @@ a:hover {
   transition-delay: 0.2s;
 }
 
+/*  Needed for filters */
+
+.hide {
+  /* You can play with the seconds to change the "animation" */
+  /* animation: hide .3s ease 0s 1 normal; */
+  display: none;
+}
+
+.show {
+  /* You can play with the seconds to change the "animation" */
+  /* animation: show .3s ease 0s 1 normal;  */
+  display: block;
+}
+
+@-webkit-keyframes hide {
+  0%{
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+@keyframes hide {
+  0%{
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+@-webkit-keyframes show {
+  0%{
+    display: block;
+  }
+
+  1% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0%{
+    display: block;
+  }
+
+  1% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*  // Needed for filters */
+
 .before\:bg-white::before {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
@@ -1433,10 +1493,6 @@ a:hover {
 
   .md\:h-auto {
     height: auto;
-  }
-
-  .md\:w-1\/2 {
-    width: 50%;
   }
 
   .md\:basis-1\/2 {
@@ -1545,10 +1601,6 @@ a:hover {
 }
 
 @media (min-width: 1280px) {
-  .xl\:w-1\/4 {
-    width: 25%;
-  }
-
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }

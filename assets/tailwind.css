@@ -313,3 +313,38 @@
 .offcanvas-menu input[type="checkbox"]:checked ~ nav label span:after {
   transition-delay: 0.2s;
 }
+
+/*  Needed for filters */
+
+.hide { /* You can play with the seconds to change the "animation" */
+  /* animation: hide .3s ease 0s 1 normal; */
+  display: none;
+}
+.show { /* You can play with the seconds to change the "animation" */
+    /* animation: show .3s ease 0s 1 normal;  */
+    display: block;
+}
+
+@keyframes hide {
+  0%{
+    opacity: 1;       
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes show {
+  0%{
+    display: block;  
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;   
+  }
+}
+/*  // Needed for filters */

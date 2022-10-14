@@ -7,14 +7,14 @@
         <div class="container mx-auto px-6 py-10 text-center pt-32 lg:pt-44">
             <h1 class="text-lg md:text-xl lg:text-4xl font-bold mb-10 lg:mb-20">{{ page.title|e }}</h1>
             
-            <div class="filters filters-button-group button-group px-6">
-                <button class="button is-checked" data-filter="*">show all</button>
-                <button class="button" data-filter=".symfony">Symfony</button>
-                <button class="button" data-filter=".prestashop">Prestashop</button>
+            <div class="filters px-6">
+                <button class="filter is-checked" data-filter="all">show all</button>
+                <button class="filter" data-filter="symfony">Symfony</button>
+                <button class="filter" data-filter="prestashop">Prestashop</button>
             </div>
             
-            {# <div class="projList grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 xl:gap-6"> #}
-            <div class="projList">
+            <div class="projList grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 xl:gap-6">
+            {# <div class="projList"> #}
             {%- for project in site.pages.showable|filter_by('section', 'projects')|sort_by_date|slice(0, 4) ~%}
                 {% include 'partials/list-project.html.twig' with {'project': project} only %}
             {%- endfor ~%}
@@ -25,7 +25,36 @@
 {%- endblock content ~%}
 
 {%- block javascript ~%}
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+        const filters = document.querySelectorAll('.filter');
+
+        filters.forEach(filter => { 
+
+            filter.addEventListener('click', function() {
+
+                let selectedFilter = filter.getAttribute('data-filter');
+                let itemsToHide = document.querySelectorAll(`.projItem:not(.${selectedFilter})`);
+                let itemsToShow = document.querySelectorAll(`.projItem.${selectedFilter}`);
+
+                if (selectedFilter == 'all') {
+                    itemsToHide = [];
+                    itemsToShow = document.querySelectorAll('.projItem');
+                }
+
+                itemsToHide.forEach(el => {
+                    el.classList.add('hide');
+                    el.classList.remove('show');
+                });
+
+                itemsToShow.forEach(el => {
+                    el.classList.remove('hide');
+                    el.classList.add('show'); 
+                });
+
+            });
+        });
+    </script>
+    {# <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script>
         // init Isotope
         var iso = new Isotope( '.projList', {
@@ -62,5 +91,5 @@
             event.target.classList.add('is-checked');
         });
         }
-    </script>
+    </script> #}
 {%- endblock ~%}
