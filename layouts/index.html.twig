@@ -1,11 +1,11 @@
 {% extends '_default/page.html.twig' %}
 
 {%- block content ~%}
-    <div class="intro w-full min-h-[90vh] relative bg-cover overflow-hidden flex items-center" style="">
+    <div class="intro w-full min-h-[90vh] relative bg-cover overflow-hidden flex items-center">
         <div class="cloud-1 w-[160vw] h-[150vh] bg-secondary rounded-full absolute -top-[100vh] -right-[100vw] blur-3xl opacity-50"></div>
         <div class="cloud-1 w-[140vw] h-[140vh] bg-secondary rounded-full absolute -left-[85vw] -bottom-[80vh] blur-3xl opacity-50"></div>
 
-        <div class="container container-md mx-auto px-6">
+        <div class="container container-md mx-auto pt-16 md:pt-48 pb-10 md:pb-28 px-6">
             <div class="flex flex-col md:flex-row gap-16 items-center">
                 <div class="md:basis-1/2 lg:basis-3/5 flex flex-col gap-1 md:gap-2 lg:gap-6">
                     <h1 class="text-xl md:text-2xl lg:text-5xl">{{ page.title }}</h1>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="md:basis-1/2 lg:basis-2/5 inclusion">
-                    {{ asset('pages/welcome.jpg')|resize(600)|html({alt: page.title}, {responsive: true}) }}
+                    {{ asset('pages/welcome.jpg')|html({alt: page.title}) }}
                 </div>
             </div>
         </div>

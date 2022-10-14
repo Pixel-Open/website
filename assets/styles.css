@@ -745,14 +745,6 @@ a:hover {
   width: 32px;
 }
 
-.basis-3\/5 {
-  flex-basis: 60%;
-}
-
-.basis-2\/5 {
-  flex-basis: 40%;
-}
-
 .resize {
   resize: both;
 }
@@ -807,10 +799,6 @@ a:hover {
 
 .gap-2 {
   gap: 0.5rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
 }
 
 .overflow-hidden {
@@ -920,8 +908,8 @@ a:hover {
   padding-bottom: 1rem;
 }
 
-.pt-32 {
-  padding-top: 8rem;
+.pt-16 {
+  padding-top: 4rem;
 }
 
 .pb-10 {
@@ -934,6 +922,14 @@ a:hover {
 
 .pr-4 {
   padding-right: 1rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .pt-4 {

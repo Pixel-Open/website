@@ -1,26 +1,22 @@
 {% extends '_default/page.html.twig' %}
-
             {%- block content ~%}
-
-                <div class="intro w-full min-h-[90vh] relative bg-cover overflow-hidden flex items-center" style="">
+                <div class="intro w-full relative bg-cover overflow-hidden flex items-center" style="">
                     <div class="cloud-1 w-[160vw] h-[150vh] bg-secondary rounded-full absolute -top-[100vh] -right-[100vw] blur-3xl opacity-50"></div>
                     <div class="cloud-1 w-[140vw] h-[140vh] bg-secondary rounded-full absolute -left-[85vw] -bottom-[80vh] blur-3xl opacity-50"></div>
-
-                    <div class="container container-md mx-auto">
-                        <div class="flex flex-row gap-16 items-center">
-                            <div class="basis-3/5 flex flex-col gap-6">
+                    <div class="container container-md mx-auto pt-24 md:pt-48 pb-10 md:pb-28 px-6">
+                        <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
+                            <div class="md:basis-1/2 flex flex-col justify-center md:justify-start gap-0 md:gap-6">
                                 <h1>{{ page.title|e }}</h1>
                                 <p class="text-gris">{{ page.content }}</p>
                                 <div>
-                                    <a href="{{ page.repository }}/releases" target="_blank"
-                                       class="text-white bg-color font-bold py-2 px-4 rounded-md transition-all hover:no-underline hover:bg-colorHover">Download</a>
+                                    <a href="{{ page.repository }}" target="_blank"
+                                       class="text-white bg-color font-bold py-2 px-4 rounded-md transition-all hover:no-underline hover:bg-colorHover">View Github Project</a>
                                 </div>
                             </div>
-                            <div class="basis-2/5">
+                            <div class="md:basis-1/2">
                                 {% if page.cover is defined %}{{ asset(page.cover)|resize(600)|html({alt: page.title}, {responsive: true}) }}{% else %}{{ asset('pages/welcome.jpg')|resize(600)|html({alt: page.title}, {responsive: true}) }}{% endif %}
                             </div>
                         </div>
                     </div>
                 </div>
-
             {%- endblock content ~%}
