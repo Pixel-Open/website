@@ -7,4 +7,10 @@ menu:
         weight: 30
 ---
 
-We use Open Source technologies on a daily basis in our Web agency, it is important to be able to share our projects as well.
+Pixel Open is a dedicated site which lists the Open Source projects of the "Pixel Développement" agency.
+
+We use Open Source solutions every day. It makes sense that we can also modestly contribute and share our projects to the community.
+
+Good visit
+
+Pixel Open Team
