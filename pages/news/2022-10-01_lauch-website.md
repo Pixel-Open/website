@@ -1,6 +1,6 @@
 ---
 title: Lauch  website !
-description: "Sharing our open source projects through a dedicated site, here is the objective of this site. We will also publish news about our projects or technical articles."
+description: "Sharing our open source projects through a dedicated site, here is the objective of this site."
 date: 2022-10-01
 cover: "news/2022/lauch-website.jpg"
 ---

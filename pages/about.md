@@ -1,5 +1,6 @@
 ---
 title: About
+description: 'Pixel Open is a dedicated site which lists the Open Source projects of the Pixel Développement agency'
 layout: content
 cover: "pages/about-2.jpg"
 menu:
