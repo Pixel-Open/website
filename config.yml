@@ -23,8 +23,8 @@ menus:
     - id: support
       enabled: false
   footer:
-    - id: projects
-      name: Legal mention
+    - id: legal-mentions
+      name: Legal mentions
       weight: 10
 
 
