@@ -19,7 +19,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="container container-md mx-auto py-10 md:py-28 text-gris px-6">
-                    {{ page.content|excerpt_html({capture : 'after'}) }}
-                </div>
+                {% if page.content|excerpt_html({capture : 'after'}) %}
+                    <div class="container container-md mx-auto py-10 md:py-28 text-gris px-6">
+                        {{ page.content|excerpt_html({capture : 'after'}) }}
+                    </div>
+                {% endif %}
             {%- endblock content ~%}

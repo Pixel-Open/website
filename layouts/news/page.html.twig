@@ -11,6 +11,7 @@
                             <div class="md:basis-1/2 flex flex-col justify-center md:justify-start gap-0 md:gap-6">
                                 <h1 class="text-xl lg:text-4xl font-bold text-center md:text-left">{{ page.title|e }}</h1>
                                 <time class="text-center md:text-left">{{ page.date|format_date('long') }}</time>
+                                <p class="text-gris">{{ page.content|excerpt_html() }}</p>
                             </div>
                             <div class="md:basis-1/2">
                                 {% if page.cover is defined %}{{ asset(page.cover)|html({alt: page.title}) }}{% else %}{{ asset('pages/welcome.jpg')|html({alt: page.title}) }}{% endif %}
@@ -19,9 +20,11 @@
                     </div>
                 </div>
 
-                <div class="container container-md mx-auto py-10 md:py-28 text-gris px-6">
-                    {{ page.content }}
-                </div>
+                {% if page.content|excerpt_html({capture : 'after'}) %}
+                    <div class="container container-md mx-auto py-10 md:py-28 text-gris px-6">
+                        {{ page.content|excerpt_html({capture : 'after'}) }}
+                    </div>
+                {% endif %}
 
                 {%- if page.prev is defined or page.next is defined ~%}
                     <nav class="w-full py-16">
