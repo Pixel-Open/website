@@ -32,6 +32,13 @@ theme:
   - pwa
 serviceworker:
   enabled: true
+manifest:
+  background_color: '#131A25'
+  theme_color: '#FFFFFF'
+  icons:
+    - icon-192x192.png
+    - icon-512x512.png
+
 pagination:
   max: 6
 metatags:
