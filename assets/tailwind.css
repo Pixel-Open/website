@@ -20,6 +20,15 @@
   a:hover {
      @apply underline;
   }
+
+}
+
+.content img {
+  @apply my-5;
+}
+
+.content ul {
+  @apply list-disc pl-5;
 }
 
 .inclusion picture, .inclusion picture img {

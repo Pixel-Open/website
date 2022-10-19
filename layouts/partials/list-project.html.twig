@@ -3,7 +3,7 @@
     <span class="cover">
          <a
                  href="{{ url(project) }}" title="{{ project.title }}">
-        {% if project.cover is defined %}{{ asset(project.cover)|html({alt: project.title}) }}{% else %}{{ asset('pages/welcome.jpg')|html({alt: project.title}) }}{% endif %}
+        {% if project.image is defined %}{{ asset(project.image)|html({alt: project.title}) }}{% else %}{{ asset('pages/welcome.jpg')|html({alt: project.title}) }}{% endif %}
          </a>
     </span>
     <h3 class="text-base md:text-xl font-bold py-4">{{ project.title }}</h3>
