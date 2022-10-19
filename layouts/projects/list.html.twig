@@ -1,6 +1,95 @@
 {% extends '_default/list.html.twig' %}
+{%- block content ~%}
+    <div class="intro w-full min-h-[90vh] relative bg-cover overflow-hidden flex" style="">
+        <div class="cloud-1 w-[160vw] h-[150vh] bg-secondary rounded-full absolute -top-[100vh] -right-[100vw] blur-3xl opacity-50"></div>
+        <div class="cloud-1 w-[140vw] h-[140vh] bg-secondary rounded-full absolute -left-[85vw] -bottom-[80vh] blur-3xl opacity-50"></div>
 
-          {%- block content_header ~%}
-          <h2><a href="{{ url(p) }}">{{ p.title|e }}</a></h2>
-          <time>{{ p.date|format_date('long') }}</time>
-          {%- endblock content_header ~%}
+        <div class="container mx-auto px-6 py-10 text-center pt-32 lg:pt-44">
+            <h1 class="text-lg md:text-xl lg:text-4xl font-bold mb-10 lg:mb-20">{{ page.title|e }}</h1>
+            
+            <div class="filters px-6">
+                <button class="filter is-checked" data-filter="all">show all</button>
+                <button class="filter" data-filter="symfony">Symfony</button>
+                <button class="filter" data-filter="prestashop">Prestashop</button>
+            </div>
+            
+            <div class="projList grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 xl:gap-6">
+            {# <div class="projList"> #}
+            {%- for project in site.pages.showable|filter_by('section', 'projects')|sort_by_date|slice(0, 4) ~%}
+                {% include 'partials/list-project.html.twig' with {'project': project} only %}
+            {%- endfor ~%}
+            </div>
+            {%~ include 'partials/pagination.html.twig' ~%}
+        </div>
+    </div>
+{%- endblock content ~%}
+
+{%- block javascript ~%}
+    <script>
+        const filters = document.querySelectorAll('.filter');
+
+        filters.forEach(filter => { 
+
+            filter.addEventListener('click', function() {
+
+                let selectedFilter = filter.getAttribute('data-filter');
+                let itemsToHide = document.querySelectorAll(`.projItem:not(.${selectedFilter})`);
+                let itemsToShow = document.querySelectorAll(`.projItem.${selectedFilter}`);
+
+                if (selectedFilter == 'all') {
+                    itemsToHide = [];
+                    itemsToShow = document.querySelectorAll('.projItem');
+                }
+
+                itemsToHide.forEach(el => {
+                    el.classList.add('hide');
+                    el.classList.remove('show');
+                });
+
+                itemsToShow.forEach(el => {
+                    el.classList.remove('hide');
+                    el.classList.add('show'); 
+                });
+
+            });
+        });
+    </script>
+    {# <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+        // init Isotope
+        var iso = new Isotope( '.projList', {
+            itemSelector: '.projItem'
+        });
+
+        // bind filter button click
+        var filtersElem = document.querySelector('.filters-button-group');
+        filtersElem.addEventListener( 'click', function( event ) {
+        // only work with buttons
+        if ( !matchesSelector( event.target, 'button' ) ) {
+            return;
+        }
+        var filterValue = event.target.getAttribute('data-filter');
+        // use matching filter function
+        filterValue = filterValue;
+        iso.arrange({ filter: filterValue });
+        });
+
+        // change is-checked class on buttons
+        var buttonGroups = document.querySelectorAll('.button-group');
+        for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+        var buttonGroup = buttonGroups[i];
+        radioButtonGroup( buttonGroup );
+        }
+
+        function radioButtonGroup( buttonGroup ) {
+        buttonGroup.addEventListener( 'click', function( event ) {
+            // only work with buttons
+            if ( !matchesSelector( event.target, 'button' ) ) {
+            return;
+            }
+            buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
+            event.target.classList.add('is-checked');
+        });
+        }
+    </script> #}
+{%- endblock ~%}

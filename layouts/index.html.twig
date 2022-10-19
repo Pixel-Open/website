@@ -1,42 +1,46 @@
 {% extends '_default/page.html.twig' %}
 
-        {%- block content ~%}
-        {#- Left Col ~#}
-        <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-          <h1 class="leading-tight text-center md:text-left slide-in-bottom-h1">🎉 {{ site.baseline }}</h1>
-          <div class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">{{ page.content }}</div>
-          <div class="flex w-full justify-center md:justify-start fade-in">
-           
-          </div>
-         
-        </div>
-        {#- Right Col ~#}
-        <div class="w-full xl:w-3/5 py-6 xl:py-0 overflow-y-hidden">
-          
-        </div>
+{%- block content ~%}
+    <div class="intro w-full min-h-[90vh] relative bg-cover overflow-hidden flex items-center">
+        <div class="cloud-1 w-[160vw] h-[150vh] bg-secondary rounded-full absolute -top-[100vh] -right-[100vw] blur-3xl opacity-50"></div>
+        <div class="cloud-1 w-[140vw] h-[140vh] bg-secondary rounded-full absolute -left-[85vw] -bottom-[80vh] blur-3xl opacity-50"></div>
 
-    {#- news ~#}
-    <div id="news" class="bg-darkblue dark:bg-black">
-      <div class="container mx-auto flex flex-wrap flex-row">
-        {%- for news in site.pages.showable|filter_by('section', 'news')|sort_by_date|slice(0, 4) ~%}
-        <a class="flex-[1_1_100%] md:flex-[1_1_25%] w-64 p-6 hover:bg-gold hover:shadow-lg group{% if loop.index > 2 %} hidden md:block{% endif %}" href="{{ url(news) }}" title="{{ news.description|default() }}">
-          <div class="text-slate-300 group-hover:text-blue mb-1">{{ news.date|format_date('long') }}</div>
-          <div class="font-medium text-white group-hover:text-darkblue">{{ news.title }}</div>
-        </a>
-        {%- endfor ~%}
-      </div>
+        <div class="container container-md mx-auto pt-24 md:pt-48 pb-10 md:pb-28 px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:basis-1/2 lg:basis-3/5 flex flex-col gap-1 md:gap-2 lg:gap-6">
+                    <h1 class="text-xl md:text-2xl lg:text-5xl">{{ page.title }}</h1>
+                    <p class="text-gris">{{ page.content }}</p>
+                    <div>
+                        <a href="{{ url('about') }}"
+                           class="text-white bg-color font-bold py-2 px-4 rounded-md transition-all hover:no-underline hover:bg-colorHover">More
+                            informations</a>
+                    </div>
+                </div>
+                <div class="md:basis-1/2 lg:basis-2/5 inclusion">
+                    {{ asset('pages/welcome.jpg')|html({alt: page.title}) }}
+                </div>
+            </div>
+        </div>
     </div>
 
-    {#- projects ~#}
-    <div id="projects" class="bg-darkblue dark:bg-black">
-      <div class="container mx-auto flex flex-wrap flex-row">
-        {%- for projects in site.pages.showable|filter_by('section', 'projects')|sort_by_date|slice(0, 4) ~%}
-        <a class="flex-[1_1_100%] md:flex-[1_1_25%] w-64 p-6 hover:bg-gold hover:shadow-lg group{% if loop.index > 2 %} hidden md:block{% endif %}" href="{{ url(projects) }}" title="{{ projects.description|default() }}">
-         
-          <div class="font-medium text-white group-hover:text-darkblue">{{ projects.title }}</div>
-        </a>
-        {%- endfor ~%}
-      </div>
+    <div class="container mx-auto px-6 py-20 text-center">
+        <h2 class="text-lg md:text-xl lg:text-3xl font-bold mb-10">Our latest projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 xl:gap-6">
+            {%- for project in site.pages.showable|filter_by('section', 'projects')|sort_by_date|slice(0, 4) ~%}
+                {% include 'partials/list-project.html.twig' with {'project': project} only %}
+            {%- endfor ~%}
+        </div>
     </div>
 
-        {%- endblock ~%}
+    <img src="{{ asset('img/bg-sep.jpg') }}" alt="" class="w-full h-auto">
+
+    <div class="container mx-auto px-6 py-20 text-center">
+        <h2 class="text-3xl font-bold mb-10">Our latest news</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 xl:gap-6">
+            {%- for new in site.pages.showable|filter_by('section', 'news')|sort_by_date|slice(0, 4) ~%}
+                {% include 'partials/list-new.html.twig' with {'new': new} only %}
+            {%- endfor ~%}
+        </div>
+    </div>
+
+{%- endblock ~%}

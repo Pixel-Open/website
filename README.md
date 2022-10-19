@@ -7,11 +7,11 @@
 ### Run Tailwind : 
 
 ```bash
-npx tailwindcss -i ./assets/tailwind.css -o ./assets/styles.css --watch
+npx tailwindcss -i ./assets/tailwind.css -o ./assets/styles.css --watch --minify
 ```
 
 ### Run Cecil : 
 
 ```bash
-cecil serve
+cecil serve --clear-cache
 ```

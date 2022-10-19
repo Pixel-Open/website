@@ -8,3 +8,5 @@ _site/
 .cecil/
 
 vendor/
+
+assets/img/.DS_Store
