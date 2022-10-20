@@ -1,8 +1,8 @@
 ---
-title: Lauch  website !
+title: Launch  website !
 description: "Sharing our open source projects through a dedicated site, here is the objective of this site."
 date: 2022-10-01
-image: "news/2022/lauch-website/cover.jpg"
+image: "news/2022/launch-website/cover.jpg"
 ---
 Sharing our open source projects through a dedicated site, here is the objective of this site. We will also publish news about our projects or technical articles.
 <!-- break -->

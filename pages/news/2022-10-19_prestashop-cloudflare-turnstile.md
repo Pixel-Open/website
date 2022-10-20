@@ -11,11 +11,11 @@ Cloudflare Turnstile protects your forms from spammers. We have developed a modu
 
 Cloudflare recently announced an alternative to **Google reCaptcha** that offers a different approach.
 
-Without going into details, a post explains in detail the new approach: https://blog.cloudflare.com/turnstile-private-captcha-alternative/
+Without going into details, **[a post explains in detail the new approach](https://blog.cloudflare.com/turnstile-private-captcha-alternative/)**.
 
 We decided to develop an open source module for Prestashop in order to implement this new service.
 
-The project is visible on Github: https://github.com/Pixel-Open/prestashop-cloudflare-turnstile
+The project is visible **[on Github](https://github.com/Pixel-Open/prestashop-cloudflare-turnstile)**
 
 **The implementation of the module requires technical notions, it is necessary to read the readme.**
 
@@ -23,8 +23,7 @@ The project is visible on Github: https://github.com/Pixel-Open/prestashop-cloud
 
 Many thanks to **Magentix** for developing the module.
 
-The Pixel Open Team
-
 ![](/news/2022/prestashop-cloudflare-turnstile/contact.jpg)
 
+The Pixel Open Team
 
