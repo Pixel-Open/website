@@ -27,7 +27,7 @@
                                 <time class="text-center md:text-left">{{ page.date|format_date('long') }}</time>
                                 <p class="text-gris " >{{ page.content|excerpt_html() }}</p>
                             </div>
-                            <div class="md:basis-1/2 fade-in ">
+                            <div class="md:basis-1/2">
                                 {% if page.image is defined %}{{ asset(page.image)|html({alt: page.title}) }}{% else %}{{ asset('pages/welcome.jpg')|html({alt: page.title}) }}{% endif %}
                             </div>
                         </div>
