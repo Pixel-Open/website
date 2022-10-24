@@ -1,6 +1,6 @@
 https://pixel-open.org/*
   X-Frame-Options: SAMEORIGIN
-  Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' static.cloudflareinsights.com; img-src 'self'; default-src static.cloudflareinsights.com
+  Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self'; default-src https://cloudflareinsights.com/cdn-cgi/rum
   Permissions-Policy: fullscreen=()
 https://pixel-open.pages.dev/*
   X-Robots-Tag: noindex
