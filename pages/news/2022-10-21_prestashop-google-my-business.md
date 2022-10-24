@@ -8,7 +8,7 @@ Automatically retrieve your business information from Google My Business : sched
 
 <!-- break -->
 
-## Connect your Google My Business page to your Prestashop
+## Your Google My Business page to your Prestashop
 
 We have developed an open source module that allows you to retrieve certain information from Google My Business:
 
