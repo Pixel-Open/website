@@ -3,6 +3,7 @@ title: "Connect your Google My Business in your Prestashop"
 description: "Automatically retrieve your business information from Google My Business : schedules, reviews..."
 date: 2022-10-22
 image: "news/2022/prestashop-google-my-business/cover.jpg"
+tags: ["prestashop", "google my business"]
 ---
 Automatically retrieve your business information from Google My Business : schedules, reviews...
 

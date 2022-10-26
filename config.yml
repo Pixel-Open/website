@@ -27,7 +27,6 @@ menus:
       name: Legal mentions
       weight: 10
 
-
 theme:
   - pwa
 serviceworker:

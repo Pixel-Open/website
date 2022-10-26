@@ -4,6 +4,7 @@ description: "A simple package to help integrate Cloudflare Turnstile on Symfony
 technos : [symfony]
 repository: https://github.com/Pixel-Open/cloudflare-turnstile-bundle
 image: "projects/symfony-cloudflare-turnstile/cover.jpg"
+tags: ["symfony", "cloudflare turnstile"]
 ---
 A simple package to help integrate Cloudflare Turnstile on Symfony Form.
 

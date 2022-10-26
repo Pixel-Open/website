@@ -3,6 +3,7 @@ title: "Protect you Prestashop form with Cloudflare Turnstile"
 description: "Cloudflare Turnstile protects your forms from spammers. We have developed a module to integrate it into the different Prestashop forms"
 date: 2022-10-19
 image: "news/2022/prestashop-cloudflare-turnstile/cover.jpg"
+tags: ["prestashop", "cloudflare turnstile"]
 ---
 Cloudflare Turnstile protects your forms from spammers. We have developed a module to integrate it into the different Prestashop forms.
 <!-- break -->
