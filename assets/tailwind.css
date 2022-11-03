@@ -28,7 +28,7 @@
 }
 
 .content ul {
-  @apply list-disc pl-5;
+  @apply list-disc pl-5 mb-5;
 }
 
 .inclusion picture, .inclusion picture img {
