@@ -6,6 +6,8 @@ technos : [prestashop]
 repository: https://github.com/Pixel-Open/prestashop-googlemybusiness
 image: "projects/prestashop-google-my-business/cover.jpg"
 tags: ["prestashop", "google my business"]
+highlight: true
+
 ---
 Import and display any Google place data on the frontend.
 <!-- break -->
