@@ -456,7 +456,10 @@ a:hover {
 }
 
 table {
+  display: block;
   width: 100%;
+  table-layout: auto;
+  overflow: auto;
 }
 
 td,
@@ -686,6 +689,10 @@ table {
 
 .grid {
   display: grid;
+}
+
+.contents {
+  display: contents;
 }
 
 .hidden {
@@ -1158,7 +1165,7 @@ table {
   transition: background 0.3s, transform 0.3s;
   content: "";
   position: absolute;
-  height: 3px;
+  height: 2px;
   width: 20px;
 }
 
@@ -1406,12 +1413,12 @@ table {
 }
 
 @media (min-width: 1280px) {
-  .xl\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .xl\:gap-6 {
