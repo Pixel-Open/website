@@ -9,11 +9,12 @@
             
             <div class="filters px-6">
                 <button class="filter is-checked" data-filter="all">show all</button>
-                <button class="filter" data-filter="symfony">Symfony</button>
+                <button class="filter" data-filter="magento">Magento</button>
                 <button class="filter" data-filter="prestashop">Prestashop</button>
+                <button class="filter" data-filter="symfony">Symfony</button>
             </div>
             
-            <div class="projList grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 xl:gap-6">
+            <div class="projList grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-6">
             {# <div class="projList"> #}
             {%- for project in site.pages.showable|filter_by('section', 'projects')|sort_by_date|slice(0, 4) ~%}
                 {% include 'partials/list-project.html.twig' with {'project': project} only %}
@@ -27,9 +28,7 @@
 {%- block javascript ~%}
     <script>
         const filters = document.querySelectorAll('.filter');
-
-        filters.forEach(filter => { 
-
+        filters.forEach(filter => {
             filter.addEventListener('click', function() {
 
                 let selectedFilter = filter.getAttribute('data-filter');
@@ -50,46 +49,8 @@
                     el.classList.remove('hide');
                     el.classList.add('show'); 
                 });
-
             });
         });
     </script>
-    {# <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script>
-        // init Isotope
-        var iso = new Isotope( '.projList', {
-            itemSelector: '.projItem'
-        });
 
-        // bind filter button click
-        var filtersElem = document.querySelector('.filters-button-group');
-        filtersElem.addEventListener( 'click', function( event ) {
-        // only work with buttons
-        if ( !matchesSelector( event.target, 'button' ) ) {
-            return;
-        }
-        var filterValue = event.target.getAttribute('data-filter');
-        // use matching filter function
-        filterValue = filterValue;
-        iso.arrange({ filter: filterValue });
-        });
-
-        // change is-checked class on buttons
-        var buttonGroups = document.querySelectorAll('.button-group');
-        for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
-        var buttonGroup = buttonGroups[i];
-        radioButtonGroup( buttonGroup );
-        }
-
-        function radioButtonGroup( buttonGroup ) {
-        buttonGroup.addEventListener( 'click', function( event ) {
-            // only work with buttons
-            if ( !matchesSelector( event.target, 'button' ) ) {
-            return;
-            }
-            buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
-            event.target.classList.add('is-checked');
-        });
-        }
-    </script> #}
 {%- endblock ~%}

@@ -7,7 +7,7 @@
 
         <div class="container mx-auto px-6 py-10 text-center pt-32 lg:pt-44">
             <h1 class="text-lg md:text-xl lg:text-4xl font-bold mb-10 lg:mb-20">{{ page.title|e }}</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 xl:gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-6">
                 {%- for new in pages ~%}
                     {% include 'partials/list-new.html.twig' with {'new': new} only %}
                 {%- endfor ~%}
