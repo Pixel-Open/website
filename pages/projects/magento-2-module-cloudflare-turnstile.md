@@ -1,5 +1,6 @@
 ---
 title: Cloudflare Turnstile for Magento 2
+date: 2022-11-07
 description: "A simple package to help integrate Cloudflare Turnstile on Magento 2 Forms (login, create account, contact...). Turnstile protects your form to spam bots."
 technos : [magento]
 repository: https://github.com/Pixel-Open/magento-cloudflare-turnstile
