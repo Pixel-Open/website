@@ -26,7 +26,8 @@ menus:
     - id: legal-mentions
       name: Legal mentions
       weight: 10
-
+tocbot:
+  version: 4.12.3
 theme:
   - pwa
 serviceworker:
