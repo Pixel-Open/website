@@ -56,7 +56,7 @@ It is only possible to retrieve the last 5 reviews. Import often to accumulate t
 
 In any template, add the following Widget:
 
-```smarty
+```html
 {widget name='pixel_googlemybusiness' display='name,rating,opening-hours,reviews'}
 ```
 
@@ -69,7 +69,7 @@ In any template, add the following Widget:
 
 For example, to display only reviews:
 
-```smarty
+```html
 {widget name='pixel_googlemybusiness' display='reviews'}
 ```
 
@@ -78,7 +78,7 @@ For example, to display only reviews:
 * review_number: the number of review to display
 * review_min_rating: only show reviews with rating greater or equal than this value
 
-```smarty
+```html
 {widget name='pixel_googlemybusiness' display='reviews' review_number=5 review_min_rating=3}
 ```
 
@@ -86,7 +86,7 @@ For example, to display only reviews:
 
 Filter by place id with the `place_ids` widget param (comma separated):
 
-```smarty
+```html
 {widget name='pixel_googlemybusiness' place_ids='ChIJLU7jZClu5kcR4PcOOO6p3I0' display='name,rating,opening-hours,reviews'}
 ```
 
