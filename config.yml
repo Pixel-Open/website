@@ -34,7 +34,7 @@ serviceworker:
   enabled: false
 manifest:
   background_color: '#131A25'
-  theme_color: '#FFFFFF'
+  theme_color: '#131A25'
   icons:
     - icon-192x192.png
     - icon-512x512.png
