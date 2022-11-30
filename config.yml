@@ -31,7 +31,7 @@ tocbot:
 theme:
   - pwa
 serviceworker:
-  enabled: true
+  enabled: false
 manifest:
   background_color: '#131A25'
   theme_color: '#FFFFFF'
