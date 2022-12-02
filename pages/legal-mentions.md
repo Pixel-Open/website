@@ -1,6 +1,7 @@
 ---
 title: Legal Mentions
 layout: content
+description: "Legal notice of the Pixel Open site. Hosting provider details: Cloudflare, Inc. - 101 Townsend St, San Francisco, CA 94107."
 cover: "pages/about-2.jpg"
 menu:
     footer:
