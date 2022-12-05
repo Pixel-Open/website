@@ -120,16 +120,22 @@
                                        data-weight="{{ footer.weight }}">{{ footer.name }}</a></li>
                             {% endfor %}
 
-                            <li><a href="/tags/">Tags</a></li>
+                            <li class="hidden md:block"><a href="/tags/">Tags</a></li>
 
                             <li><a class="text-slate-700 dark:text-slate-300 no-underline hover:no-underline"
                                    href="{{ cecil.url }}"
                                    target="_blank">{% trans with {'%powered_by%': 'Cecil'} %}Powered by %powered_by%{% endtrans %}</a>
                             </li>
                             <li>
+                                <a class="" target="_blank" href="/rss/">
+                                    <img src="/icons/rss.svg" width="24" height="24" alt="rss"
+                                         class="object-contain ">
+                                </a>
+                            </li>
+                            <li>
                                 <a class="" target="_blank" href="{{ site.socials.github }}">
-                                    <img src="/icons/github.svg" width="32" height="32" alt="github"
-                                         class="object-contain w-[32px]">
+                                    <img src="/icons/github.svg" width="24" height="24" alt="github"
+                                         class="object-contain ">
                                 </a>
                             </li>
                         </ul>
@@ -140,6 +146,21 @@
     </div>
 </div>
 {% include 'partials/regsw.js.twig' %}
+<script>
+    {% apply minify_js %}
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const menuCheckbox = document.getElementById('toogle-menu');
+        menuCheckbox.checked = false;
+        document.addEventListener('click', function (event) {
+            if (!event.target.matches('.toogle-menu')) return;
+            event.preventDefault();
+            menuCheckbox.checked = true;
+
+        }, false);
+    });
+    {% endapply %}
+</script>
 {%- block javascript ~%}
 {%- endblock ~%}
 
