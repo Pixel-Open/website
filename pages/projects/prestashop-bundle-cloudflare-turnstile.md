@@ -121,4 +121,4 @@ Use the following sitekeys and secret keys for testing purposes:
 | 2x0000000000000000000000000000000AA | Always fails                         |
 | 3x0000000000000000000000000000000AA | Yields a "token already spent" error |
 
-![](/news/2022/prestashop-cloudflare-turnstile/contact.jpg)
+![The module allows Turnstile to protect your Prestashop forms](/news/2022/prestashop-cloudflare-turnstile/contact.jpg)

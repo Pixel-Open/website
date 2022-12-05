@@ -27,7 +27,7 @@ This saves performance, no heavy script to load!
 
 And this performance has an environmental impact, a report shows it: https://www.websitecarbon.com/website/pixel-open-org/
 
-![](/news/2022/launch-website/performance.jpg)
+![Pixel Open](/news/2022/launch-website/performance.jpg)
 
 ## Upcoming improvements
 

@@ -96,4 +96,4 @@ Filter by place id with the `place_ids` widget param (comma separated):
 
 In admin, go to the **Translations** page under the **International** menu.
 
-![](/news/2022/prestashop-google-my-business/screenshot.png)
+![Google My Business for Prestashop](/news/2022/prestashop-google-my-business/screenshot.png)

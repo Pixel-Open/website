@@ -27,7 +27,7 @@ You can see the project here: https://github.com/Pixel-Open/prestashop-googlemyb
 
 Many thanks to Magentix for developing the module.
 
-![](/news/2022/prestashop-google-my-business/screenshot.png)
+![Connect your Google My Business in your Prestashop](/news/2022/prestashop-google-my-business/screenshot.png)
 
 The Pixel Open Team
 

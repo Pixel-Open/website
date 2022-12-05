@@ -24,7 +24,7 @@ The project is visible **[on Github](https://github.com/Pixel-Open/prestashop-cl
 
 Many thanks to **Magentix** for developing the module.
 
-![](/news/2022/prestashop-cloudflare-turnstile/contact.jpg)
+![Protect you Prestashop form with Cloudflare Turnstile](/news/2022/prestashop-cloudflare-turnstile/contact.jpg)
 
 The Pixel Open Team
 

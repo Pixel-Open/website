@@ -75,4 +75,4 @@ Use the following sitekeys and secret keys for testing purposes:
 | 2x0000000000000000000000000000000AA | Always fails                         |
 | 3x0000000000000000000000000000000AA | Yields a "token already spent" error |
 
-![](/projects/magento-2-cloudflare-turnstile/contact-form.png)
+![The module allows Turnstile to protect your Magento or Adobe Commerce forms](/projects/magento-2-cloudflare-turnstile/contact-form.png)

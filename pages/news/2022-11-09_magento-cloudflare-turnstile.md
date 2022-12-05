@@ -30,7 +30,7 @@ This module protects your frontend forms :
 
 Many thanks to **Magentix** for developing the module.
 
-![](/projects/magento-2-cloudflare-turnstile/contact-form.png)
+![Protect you Magento 2 form with Cloudflare Turnstile](/projects/magento-2-cloudflare-turnstile/contact-form.png)
 
 The Pixel Open Team
 
