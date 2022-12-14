@@ -109,7 +109,7 @@ Use the following sitekeys and secret keys for testing purposes:
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT).
 
 ## Changelog
 
