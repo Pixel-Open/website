@@ -40,7 +40,7 @@ manifest:
     - icon-512x512.png
 
 pagination:
-  max: 6
+  max: 20
 metatags:
   jsonld: true
   articles: news

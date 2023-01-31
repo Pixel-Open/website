@@ -16,7 +16,7 @@
             
             <div class="projList grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-6">
             {# <div class="projList"> #}
-            {%- for project in site.pages.showable|filter_by('section', 'projects')|sort_by_date|slice(0, 4) ~%}
+            {%- for project in site.pages.showable|filter_by('section', 'projects')|sort_by_date|slice(0, 20) ~%}
                 {% include 'partials/list-project.html.twig' with {'project': project} only %}
             {%- endfor ~%}
             </div>
