@@ -95,4 +95,4 @@ In any template or JS file, use the `plausible` method to send the event to Plau
 + Custom event name and props added
 + First release
 
-![The module allows Turnstile to protect your Prestashop forms](/projects/plausible-prestashop/screenshot.png)
+![Plausible Analytics for Prestashop](/projects/plausible-prestashop/screenshot.png)
