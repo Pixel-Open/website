@@ -3,7 +3,7 @@ title: Plausible Analytics for Prestashop
 date: 2023-01-31
 description : "Add Plausible Analytics in Prestashop. Plausible Analytics is an open source, simple, lightweight and privacy-friendly Google Analytics alternative."
 technos : [prestashop]
-repository: https://github.com/Pixel-Open/prestashop-cloudflare-turnstile
+repository: https://github.com/Pixel-Open/prestashop-plausible
 image: "projects/plausible-prestashop/cover.jpg"
 tags: ["prestashop", "plausible", "Google Analytics alternative"]
 highlight: true
