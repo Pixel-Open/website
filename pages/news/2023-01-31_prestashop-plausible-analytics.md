@@ -5,12 +5,12 @@ date: 2023-01-31
 image: "news/2023/prestashop-plausible/plausible.jpg"
 tags: ["prestashop", "plausible", "Google Analytics alternative"]
 ---
-Plausible is lightweight and open source web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. We have developed a Prestashop module to implement Plausible analytics on your e-commerce site.
+Plausible is lightweight and open source web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. We have developed a [Prestashop module to implement Plausible analytics](/projects/prestashop-plausible/) on your e-commerce site.
 <!-- break -->
 
 ## Goodbye Google Analytics 🤗
 
-Plausible is one of the alternatives to Google Analytics.
+[Plausible](https://plausible.io) is one of the alternatives to Google Analytics.
 
 We like this solution for the following points:
 
@@ -28,8 +28,9 @@ The module adds the following features:
 - Includes goal events when enabled in module configuration: Contact message sent, Cart view, Checkout step X, Order complete
 - Add a custom goal
 
+[Clic here to see this module.](/projects/prestashop-plausible/)
 
-Many thanks to **Magentix** for developing the module.
+Many thanks to **[Magentix](https://www.magentix.fr/)** for developing the module.
 
 ![Plausible Analytics for Prestashop](/projects/plausible-prestashop/screenshot.png)
 

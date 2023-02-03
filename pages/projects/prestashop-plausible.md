@@ -9,7 +9,7 @@ tags: ["prestashop", "plausible", "Google Analytics alternative"]
 highlight: true
 
 ---
-Plausible Analytics is :
+[Plausible Analytics](https://plausible.io) is :
 - open source
 - simple
 - lightweight
