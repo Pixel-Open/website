@@ -123,6 +123,10 @@ Use the following sitekeys and secret keys for testing purposes:
 
 ## Changelog
 
+### 1.1.1 (17/02/20233)
+
+- Fix renew password form turnstile error
+
 ### 1.1.0 (14/10/2022)
 
 + Prestashop 8.0.0 compatibility
