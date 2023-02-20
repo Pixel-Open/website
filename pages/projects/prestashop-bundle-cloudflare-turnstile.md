@@ -9,7 +9,7 @@ tags: ["prestashop", "cloudflare turnstile", "security"]
 highlight: true
 
 ---
-Turnstile is Cloudflare's smart CAPTCHA alternative. The module allows Turnstile to protect your Prestashop forms:
+[Turnstile is Cloudflare's smart CAPTCHA alternative](https://www.cloudflare.com/products/turnstile/). The module allows Turnstile to protect your Prestashop forms:
 - Contact
 - Login
 - Register

@@ -97,3 +97,17 @@ Filter by place id with the `place_ids` widget param (comma separated):
 In admin, go to the **Translations** page under the **International** menu.
 
 ![Google My Business for Prestashop](/news/2022/prestashop-google-my-business/screenshot.png)
+
+## Changelog
+
+### 1.0.3 (17/02/2023)
+
++ Custom widget template
+
+### 1.0.2 (04/11/2022)
+
+- Views directory protection
+
+### 1.0.0 & 1.0.1 (14/10/2022)
+
++ First release
