@@ -101,7 +101,7 @@ Create a new template file in the **pixel_googlemybusiness** directory for your 
 
 *themes/{themeName}/modules/pixel_googlemybusiness/custom.tpl*
 
-```smarty
+```html
 {foreach from=$places item=place}
     {$place->getPlaceId()}
     {$place->getName()}
